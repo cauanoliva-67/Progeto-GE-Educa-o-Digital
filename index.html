@@ -1,142 +1,226 @@
 <!DOCTYPE html>
-<!-- saved from url=(0014)about:internet -->
-<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>document</title>   
-        <style>
-            header{
-                background-color: #000000(78, 2, 255);
-                color: #000000(0, 0, 0);
-                text-align: center;
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 16px;
-                  border: 5px solid rgb(0, 0, 0);
-            }
-               main{
-                background-color: rgb(255, 255, 255);
-                color: #000000(0, 0, 0);
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 16px;
-                display: flex;
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosidades sobre memes</title>    
+    <style>
+        /* Fundo preto e texto rosa para o site inteiro */
+        body {
+            background-color: black;
+            color: rgba(238, 110, 168, 1.00);
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-               }
-               img{
-                width: 290px;
-                height: 200px;
-               }
-               p{
-                font-weight: bold;
-               }
-                
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>Curiosidades sobre memes</h1>
-            <p>Vou compartilhar algumas curiosidades sobre memes verão 6.7</p>
-        </header>
-          <main>
-            <img src="imagem.gif" alt="Garoto fazendo o sinal do número 67 com as mãos em um loop de GIF animado">
-             <div>
-             <h2>Meu primeiro post</h2>
-              <p>Por: Cauan</p>
-              <p> Boas vindas programador! aqui vou te ensinar algumas curiosidades sobre o mundo dos memes.</p>
-                  <button>❤️ <span>6767</span></button>
-                  <button>🔥 <span>0</span></button>
+        header {
+            background-color: #000000;
+            color: rgba(238, 110, 168, 1.00);
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px;
+            border: 2px solid rgba(238, 110, 168, 1.00);
+        }
+
+        main {
+            background-color: #000000;
+            color: rgba(238, 110, 168, 1.00);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .post-principal {
+            display: flex;
+            gap: 20px;
+        }
+
+        img {
+            width: 290px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        p {
+            font-weight: bold;
+        }
+
+        /* Classe para as fontes individuais */
+        .fonte {
+            font-size: 12px;
+            font-weight: normal;
+            font-style: italic;
+            opacity: 0.8;
+            margin-top: -5px;
+            margin-bottom: 12px;
+        }
+
+        /* Estilo interativo dos botões adaptado ao tema escuro */
+        button {
+            background-color: #1a1a1a;
+            color: rgba(238, 110, 168, 1.00);
+            border: 1px solid rgba(238, 110, 168, 0.5);
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: transform 0.1s, background-color 0.2s;
+            margin-right: 5px;
+        }
+
+        button:hover {
+            background-color: #333333;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .linha-posts {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            font-family: sans-serif;
+        }
+
+        .post-card {
+            width: 30%;
+            border: 1px solid rgba(238, 110, 168, 0.4);
+            background-color: #0d0d0d;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(238, 110, 168, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .post-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 3px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: rgba(238, 110, 168, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Curiosidades sobre memes</h1>
+        <p>Vou compartilhar algumas curiosidades sobre memes verão 6.7</p>
+    </header>
+
+    <main>
+        <div class="post-principal">
+            <img src="./index_files/imagem.gif" alt="Garoto fazendo o sinal do número 67">
+            <div>
+                <h2>Meu primeiro post</h2>
+                <p>Por: Cauan</p>
+                <p>Boas vindas programador! Aqui vou te ensinar algumas curiosidades sobre o mundo dos memes.</p>
+                <button>❤️ <span>6767</span></button>
+                <button>🔥 <span>0</span></button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <img src="00563_gg.jpg" width="150" alt="Meme 1">
+            <h2>O Primeiro Meme da História</h2>
+            <p>Por: Cauan</p>
+            <p style="font-weight: normal;">Você sabia que a palavra "meme" surgiu em 1976? Um cientista inventou esse termo para explicar como as piadas e ideias se espalham de pessoa para pessoa!</p>
+            <p class="fonte">Fonte: DAWKINS, Richard. <em>O Gene Egoísta</em> (1976).</p>
+            
+            <button>❤️ <span>4120</span></button>
+            <button>🔥 <span>32</span></button>
+        </div>
+
+        <div>
+            <img src="keycat-keyboard-cat.gif" width="150" alt="Meme 2">
+            <h2>Por que rimos de memes?</h2>
+            <p>Por: Cauan</p>
+            <p style="font-weight: normal;">Os memes funcionam como piadas internas, só que com o mundo inteiro! Nós compartilhamos porque eles nos fazem sentir parte de um grupo que entende a mesma graça.</p>
+            <p class="fonte">Fonte: SHIFMAN, Limor. <em>Memes in Digital Culture</em> (MIT Press, 2014).</p>
+            
+            <button>❤️ <span>5890</span></button>
+            <button>🔥 <span>18</span></button>
+        </div>
+
+        <div class="linha-posts">
+            <div class="post-card">
+                <div>
+                    <img src="download (1).jpeg" alt="Meme Doge">
+                    <h3>Doge: O Meme de 20 Milhões!</h3>
+                    <p style="font-size: 14px; color: rgba(238, 110, 168, 0.8);">Por: Cauan</p>
+                    <p style="font-size: 14px; font-weight: normal; color: rgba(238, 110, 168, 1.00);">
+                        A famosa foto da cadelinha Kabosu foi vendida em um leilão digital por impressionantes <strong>US$ 4 milhões</strong>!
+                    </p>
+                    <p class="fonte">Fonte: NBC News / Leilão Zora (2021)</p>
                 </div>
-         <!-- === SEGUNDO POST === -->
-<div style="margin-bottom: 40px;">
-    <img src="" width="150" alt="Meme 1">
-    
-    <h2>O Primeiro Meme da História</h2>
-    <p><b>Por: Cauan</b></p>
-    <p>Você sabia que a palavra "meme" surgiu em 1976? Um cientista inventou esse termo para explicar como as piadas e ideias se espalham de pessoa para pessoa!</p>
-    
-     <button class="btn-reacao">❤️ <span>4120</span></button>
-            <button class="btn-reacao">🔥 <span>32</span></button>
-</div>
+                <div class="interacoes">
+                    <button>❤️ <span>7840</span></button>
+                    <button>🔥 <span>94</span></button>
+                </div>
+            </div>
 
-<!-- === TERCEIRO POST === -->
-<div style="margin-bottom: 40px;">
-    <img src="keycat-keyboard-cat.gif" width="150" alt="Meme 2">
-    
-    <h2>Por que rimos de memes?</h2>
-    <p><b>Por: Cauan</b></p>
-    <p>Os memes funcionam como piadas internas, só que com o mundo inteiro! Nós compartilhamos porque eles nos fazem sentir parte de um grupo que entende a mesma graça.</p>
-    
-    <button class="btn-reacao">❤️ <span>5890</span></button>
-            <button class="btn-reacao">🔥 <span>18</span></button>
-</div>
-<!-- Nova Linha: Memes Mais Caros -->
-<div class="linha-posts" style="display: flex; justify-content: space-around; margin-top: 40px; font-family: sans-serif;">
+            <div class="post-card">
+                <div>
+                    <img src="download.jpeg" alt="Meme Disaster Girl">
+                    <h3>O Sorriso que Valeu Meio Milhão</h3>
+                    <p style="font-size: 14px; color: rgba(238, 110, 168, 0.8);">Por: Cauan</p>
+                    <p style="font-size: 14px; font-weight: normal; color: rgba(238, 110, 168, 1.00);">
+                        A clássica foto da menininha sorrindo em frente a uma casa pegando fogo rendeu a venda do arquivo por <strong>US$ 500 mil</strong>!
+                    </p>
+                    <p class="fonte">Fonte: The New York Times (2021)</p>
+                </div>
+                <div class="interacoes">
+                    <button>❤️ <span>6120</span></button>
+                    <button>🔥 <span>56</span></button>
+                </div>
+            </div>
 
-    <!-- Post 1: Doge -->
-    <div class="post" style="width: 30%; border: 1px solid #ccc; padding: 15px; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
-        <img src="download (1).jpeg" alt="Meme Doge" style="width: 100%; height: auto; border-radius: 3px;">
-        <h3 style="margin-top: 15px; color: #111;">Doge: O Meme de 20 Milhões!</h3>
-        <p style="font-size: 14px; color: #555; font-weight: bold;">Por: Cauan</p>
-        <p style="font-size: 14px; line-height: 1.5; color: #333;">
-            A famosa foto da cadelinha Kabosu, da raça Shiba Inu, foi vendida em um leilão digital por impressionantes <strong>US$ 4 milhões</strong> (cerca de R$ 20 milhões)! Esse valor transformou a imagem no meme original mais caro da internet.
-        </p>
-     <div class="interacoes" style="margin-top: 15px;">
-                    <button class="btn-reacao">❤️ <span>7840</span></button>
-                    <button class="btn-reacao">🔥 <span>94</span></button>
+            <div class="post-card">
+                <div>
+                    <img src="download.png" alt="Meme Nyan Cat">
+                    <h3>Nyan Cat: O GIF de Ouro</h3>
+                    <p style="font-size: 14px; color: rgba(238, 110, 168, 0.8);">Por: Cauan</p>
+                    <p style="font-size: 14px; font-weight: normal; color: rgba(238, 110, 168, 1.00);">
+                        O gatinho pixelado que voa pelo espaço teve sua animação oficial vendida por cerca de <strong>US$ 590 mil</strong>.
+                    </p>
+                    <p class="fonte">Fonte: The Verge (2021)</p>
+                </div>
+                <div class="interacoes">
+                    <button>❤️ <span>5430</span></button>
+                    <button>🔥 <span>42</span></button>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
 
-    <!-- Post 2: Disaster Girl -->
-    <div class="post" style="width: 30%; border: 1px solid #ccc; padding: 15px; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
-        <img src="download.jpeg" alt="Meme Disaster Girl" style="width: 100%; height: auto; border-radius: 3px;">
-        <h3 style="margin-top: 15px; color: #111;">O Sorriso que Valeu Meio Milhão</h3>
-        <p style="font-size: 14px; color: #555; font-weight: bold;">Por: Cauan</p>
-        <p style="font-size: 14px; line-height: 1.5; color: #333;">
-            Aquela clássica foto da menininha sorrindo de forma maliciosa em frente a uma casa pegando fogo rendeu muito dinheiro. Anos depois, a jovem da foto vendeu o arquivo digital original por nada menos que <strong>US$ 500 mil</strong>!
-        </p>
-        <div class="interacoes" style="margin-top: 15px; font-size: 14px;">
-            <span style="margin-right: 15px;">❤️ 67</span>
-            <span>🔥 56</span>
-        </div>
-    </div>
+    <script>
+        // Seleciona todos os botões da página
+        const botoes = document.querySelectorAll("button");
 
-    <!-- Post 3: Nyan Cat -->
-    <div class="post" style="width: 30%; border: 1px solid #ccc; padding: 15px; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
-        <img src="download.png" alt="Meme Nyan Cat" style="width: 100%; height: auto; border-radius: 3px;">
-        <h3 style="margin-top: 15px; color: #111;">Nyan Cat: O GIF de Ouro</h3>
-        <p style="font-size: 14px; color: #555; font-weight: bold;">Por: Cauan</p>
-        <p style="font-size: 14px; line-height: 1.5; color: #333;">
-            Um dos GIFs mais nostálgicos da internet — o gatinho pixelado que voa pelo espaço deixando um rastro de arco-íris — completou aniversário em grande estilo. O criador vendeu a animação oficial por cerca de <strong>US$ 590 mil</strong>.
-        </p>
-        <div class="interacoes" style="margin-top: 15px; font-size: 14px;">
-         button class="btn-reacao">❤️ <span>5430</span></button>
-                    <button class="btn-reacao">🔥 <span>42</span></button>  
-        </div>
-    </div>
-
-</div>
-
-</div>
-
-          </main>
-     
-     <script>
-  // Seleciona todos os botões de curtida da página
-  const botoesCurtida = document.querySelectorAll("button");
-
-  // Configura o evento de clique de forma independente para cada botão
-  botoesCurtida.forEach(botao => {
-    const labelContador = botao.querySelector("span");
-    let totalCurtidas = parseInt(labelContador.textContent) || 0;
-
-    botao.addEventListener("click", () => {
-      totalCurtidas++;
-      labelContador.textContent = totalCurtidas;
-    });
-  });
-</script>
+        // Adiciona evento de clique independente para cada botão
+        botoes.forEach(botao => {
+            botao.addEventListener("click", () => {
+                const span = botao.querySelector("span");
+                if (span) {
+                    let total = parseInt(span.textContent) || 0;
+                    total++;
+                    span.textContent = total;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
-     </script>
