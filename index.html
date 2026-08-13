@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curiosidades sobre memes</title>    
+    <title>Curiosidades sobre Memes</title>   
     <style>
-        /* Fundo preto e texto rosa para o site inteiro */
+        /* Estilos globais */
         body {
-            background-color: black;
+            background-color: #000000;
             color: rgba(238, 110, 168, 1.00);
             font-family: sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 20px;
         }
 
         header {
@@ -19,9 +19,10 @@
             color: rgba(238, 110, 168, 1.00);
             text-align: center;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 0 auto 20px auto;
             padding: 16px;
             border: 2px solid rgba(238, 110, 168, 1.00);
+            border-radius: 8px;
         }
 
         main {
@@ -29,38 +30,40 @@
             color: rgba(238, 110, 168, 1.00);
             max-width: 1200px;
             margin: 0 auto;
-            padding: 16px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 24px;
         }
 
         .post-principal {
             display: flex;
             gap: 20px;
+            background-color: #0d0d0d;
+            border: 1px solid rgba(238, 110, 168, 0.4);
+            padding: 20px;
+            border-radius: 8px;
         }
 
-        img {
+        .post-principal img {
             width: 290px;
             height: 200px;
             object-fit: cover;
+            border-radius: 4px;
         }
 
         p {
             font-weight: bold;
         }
 
-        /* Classe para as fontes individuais */
         .fonte {
             font-size: 12px;
             font-weight: normal;
             font-style: italic;
             opacity: 0.8;
-            margin-top: -5px;
+            margin-top: 4px;
             margin-bottom: 12px;
         }
 
-        /* Estilo interativo dos botões adaptado ao tema escuro */
         button {
             background-color: #1a1a1a;
             color: rgba(238, 110, 168, 1.00);
@@ -84,16 +87,17 @@
         .linha-posts {
             display: flex;
             justify-content: space-between;
-            margin-top: 20px;
-            font-family: sans-serif;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         .post-card {
-            width: 30%;
+            flex: 1;
+            min-width: 250px;
             border: 1px solid rgba(238, 110, 168, 0.4);
             background-color: #0d0d0d;
             padding: 15px;
-            border-radius: 5px;
+            border-radius: 8px;
             box-shadow: 2px 2px 5px rgba(238, 110, 168, 0.1);
             display: flex;
             flex-direction: column;
@@ -102,68 +106,78 @@
 
         .post-card img {
             width: 100%;
-            height: auto;
-            border-radius: 3px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 4px;
         }
 
-        hr {
-            border: 0;
-            height: 1px;
-            background-color: rgba(238, 110, 168, 0.3);
+        .post-card p {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 1.4;
         }
     </style>
 </head>
 <body>
+
     <header>
         <h1>Curiosidades sobre memes</h1>
         <p>Vou compartilhar algumas curiosidades sobre memes verão 6.7</p>
     </header>
 
     <main>
+        <!-- Post Principal -->
         <div class="post-principal">
-            <img src="./index_files/imagem.gif" alt="Garoto fazendo o sinal do número 67">
+            <img src="imagem.gif" alt="Garoto fazendo o sinal do número 67">
             <div>
                 <h2>Meu primeiro post</h2>
                 <p>Por: Cauan</p>
-                <p>Boas vindas programador! Aqui vou te ensinar algumas curiosidades sobre o mundo dos memes.</p>
+                <p style="font-weight: normal;">Boas vindas programador! Aqui vou te ensinar algumas curiosidades sobre o mundo dos memes.</p>
                 <button>❤️ <span>6767</span></button>
                 <button>🔥 <span>0</span></button>
             </div>
         </div>
 
-        <hr>
-
-        <div>
-            <img src="00563_gg.jpg" width="150" alt="Meme 1">
-            <h2>O Primeiro Meme da História</h2>
-            <p>Por: Cauan</p>
-            <p style="font-weight: normal;">Você sabia que a palavra "meme" surgiu em 1976? Um cientista inventou esse termo para explicar como as piadas e ideias se espalham de pessoa para pessoa!</p>
-            <p class="fonte">Fonte: DAWKINS, Richard. <em>O Gene Egoísta</em> (1976).</p>
-            
-            <button>❤️ <span>4120</span></button>
-            <button>🔥 <span>32</span></button>
-        </div>
-
-        <div>
-            <img src="keycat-keyboard-cat.gif" width="150" alt="Meme 2">
-            <h2>Por que rimos de memes?</h2>
-            <p>Por: Cauan</p>
-            <p style="font-weight: normal;">Os memes funcionam como piadas internas, só que com o mundo inteiro! Nós compartilhamos porque eles nos fazem sentir parte de um grupo que entende a mesma graça.</p>
-            <p class="fonte">Fonte: SHIFMAN, Limor. <em>Memes in Digital Culture</em> (MIT Press, 2014).</p>
-            
-            <button>❤️ <span>5890</span></button>
-            <button>🔥 <span>18</span></button>
-        </div>
-
+        <!-- Grade de Posts Secundários -->
         <div class="linha-posts">
+            
+            <!-- Post 1: Origem -->
+            <div class="post-card">
+                <div>
+                    <img src="00563_gg.jpg" alt="Primeiro Meme">
+                    <h3>O Primeiro Meme da História</h3>
+                    <p style="opacity: 0.8;">Por: Cauan</p>
+                    <p>Você sabia que a palavra "meme" surgiu em 1976? Um cientista inventou esse termo para explicar como as piadas e ideias se espalham!</p>
+                    <p class="fonte">Fonte: DAWKINS, Richard. O Gene Egoísta (1976).</p>
+                </div>
+                <div class="interacoes">
+                    <button>❤️ <span>4120</span></button>
+                    <button>🔥 <span>32</span></button>
+                </div>
+            </div>
+
+            <!-- Post 2: Por que rimos -->
+            <div class="post-card">
+                <div>
+                    <img src="keycat-keyboard-cat.gif" alt="Keyboard Cat">
+                    <h3>Por que rimos de memes?</h3>
+                    <p style="opacity: 0.8;">Por: Cauan</p>
+                    <p>Os memes funcionam como piadas internas globais! Compartilhamos para nos sentirmos parte de um grupo que entende a mesma graça.</p>
+                    <p class="fonte">Fonte: SHIFMAN, Limor. Memes in Digital Culture (2014).</p>
+                </div>
+                <div class="interacoes">
+                    <button>❤️ <span>5890</span></button>
+                    <button>🔥 <span>18</span></button>
+                </div>
+            </div>
+
+            <!-- Post 3: Doge -->
             <div class="post-card">
                 <div>
                     <img src="download (1).jpeg" alt="Meme Doge">
                     <h3>Doge: O Meme de 20 Milhões!</h3>
-                    <p style="font-size: 14px; color: rgba(238, 110, 168, 0.8);">Por: Cauan</p>
-                    <p style="font-size: 14px; font-weight: normal; color: rgba(238, 110, 168, 1.00);">
-                        A famosa foto da cadelinha Kabosu foi vendida em um leilão digital por impressionantes <strong>US$ 4 milhões</strong>!
-                    </p>
+                    <p style="opacity: 0.8;">Por: Cauan</p>
+                    <p>A famosa foto da cadelinha Kabosu foi vendida em um leilão digital por impressionantes <strong>US$ 4 milhões</strong>!</p>
                     <p class="fonte">Fonte: NBC News / Leilão Zora (2021)</p>
                 </div>
                 <div class="interacoes">
@@ -172,14 +186,13 @@
                 </div>
             </div>
 
+            <!-- Post 4: Disaster Girl -->
             <div class="post-card">
                 <div>
                     <img src="download.jpeg" alt="Meme Disaster Girl">
-                    <h3>O Sorriso que Valeu Meio Milhão</h3>
-                    <p style="font-size: 14px; color: rgba(238, 110, 168, 0.8);">Por: Cauan</p>
-                    <p style="font-size: 14px; font-weight: normal; color: rgba(238, 110, 168, 1.00);">
-                        A clássica foto da menininha sorrindo em frente a uma casa pegando fogo rendeu a venda do arquivo por <strong>US$ 500 mil</strong>!
-                    </p>
+                    <h3>O Sorriso de Meio Milhão</h3>
+                    <p style="opacity: 0.8;">Por: Cauan</p>
+                    <p>A clássica foto da menininha sorrindo em frente a uma casa pegando fogo foi vendida por <strong>US$ 500 mil</strong>!</p>
                     <p class="fonte">Fonte: The New York Times (2021)</p>
                 </div>
                 <div class="interacoes">
@@ -188,14 +201,13 @@
                 </div>
             </div>
 
+            <!-- Post 5: Nyan Cat -->
             <div class="post-card">
                 <div>
                     <img src="download.png" alt="Meme Nyan Cat">
                     <h3>Nyan Cat: O GIF de Ouro</h3>
-                    <p style="font-size: 14px; color: rgba(238, 110, 168, 0.8);">Por: Cauan</p>
-                    <p style="font-size: 14px; font-weight: normal; color: rgba(238, 110, 168, 1.00);">
-                        O gatinho pixelado que voa pelo espaço teve sua animação oficial vendida por cerca de <strong>US$ 590 mil</strong>.
-                    </p>
+                    <p style="opacity: 0.8;">Por: Cauan</p>
+                    <p>O gatinho pixelado que voa pelo espaço teve sua animação oficial vendida por cerca de <strong>US$ 590 mil</strong>.</p>
                     <p class="fonte">Fonte: The Verge (2021)</p>
                 </div>
                 <div class="interacoes">
@@ -203,6 +215,7 @@
                     <button>🔥 <span>42</span></button>
                 </div>
             </div>
+
         </div>
     </main>
 
@@ -210,7 +223,7 @@
         // Seleciona todos os botões da página
         const botoes = document.querySelectorAll("button");
 
-        // Adiciona evento de clique independente para cada botão
+        // Adiciona o contador independente em cada um
         botoes.forEach(botao => {
             botao.addEventListener("click", () => {
                 const span = botao.querySelector("span");
