@@ -5,29 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curiosidades sobre Memes</title>   
     <style>
-        /* Estilos globais */
+        /* 1. Definição das Variáveis de Cores */
+        :root {
+            /* Modo Escuro (Padrão) */
+            --cor-fundo: #000000;
+            --cor-card: #0d0d0d;
+            --cor-texto: rgba(238, 110, 168, 1.00);
+            --cor-primaria: rgba(238, 110, 168, 1.00);
+            --cor-secundaria: rgba(238, 110, 168, 0.4);
+            --cor-contraste: #ffffff;
+            --cor-botao: #1a1a1a;
+            --cor-botao-hover: #333333;
+        }
+
+        /* Modo Claro (Sobrescreve as variáveis ao adicionar a classe) */
+        :root.light-mode {
+            --cor-fundo: #f4f4f9;
+            --cor-card: #ffffff;
+            --cor-texto: #4a154b;
+            --cor-primaria: #8a2be2;
+            --cor-secundaria: rgba(138, 43, 226, 0.3);
+            --cor-contraste: #1a1a1a;
+            --cor-botao: #e0e0e0;
+            --cor-botao-hover: #d0d0d0;
+        }
+
+        /* Estilos globais usando as variáveis */
         body {
-            background-color: #000000;
-            color: rgba(238, 110, 168, 1.00);
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
             font-family: sans-serif;
             margin: 0;
             padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         header {
-            background-color: #000000;
-            color: rgba(238, 110, 168, 1.00);
+            background-color: var(--cor-fundo);
+            color: var(--cor-primaria);
             text-align: center;
             max-width: 1200px;
             margin: 0 auto 20px auto;
             padding: 16px;
-            border: 2px solid rgba(238, 110, 168, 1.00);
+            border: 2px solid var(--cor-primaria);
             border-radius: 8px;
+            position: relative;
+        }
+
+        .btn-tema {
+            position: absolute;
+            top: 15px;
+            right: 15px;
         }
 
         main {
-            background-color: #000000;
-            color: rgba(238, 110, 168, 1.00);
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
@@ -38,8 +71,8 @@
         .post-principal {
             display: flex;
             gap: 20px;
-            background-color: #0d0d0d;
-            border: 1px solid rgba(238, 110, 168, 0.4);
+            background-color: var(--cor-card);
+            border: 1px solid var(--cor-secundaria);
             padding: 20px;
             border-radius: 8px;
         }
@@ -64,20 +97,19 @@
             margin-bottom: 12px;
         }
 
-        /* Estilo para deixar os links das fontes visíveis e estilizados */
         .fonte a {
-            color: rgba(238, 110, 168, 1.00);
+            color: var(--cor-primaria);
             text-decoration: underline;
         }
 
         .fonte a:hover {
-            color: #ffffff;
+            color: var(--cor-contraste);
         }
 
         button {
-            background-color: #1a1a1a;
-            color: rgba(238, 110, 168, 1.00);
-            border: 1px solid rgba(238, 110, 168, 0.5);
+            background-color: var(--cor-botao);
+            color: var(--cor-texto);
+            border: 1px solid var(--cor-secundaria);
             border-radius: 6px;
             padding: 8px 12px;
             font-size: 14px;
@@ -87,7 +119,7 @@
         }
 
         button:hover {
-            background-color: #333333;
+            background-color: var(--cor-botao-hover);
         }
 
         button:active {
@@ -104,11 +136,11 @@
         .post-card {
             flex: 1;
             min-width: 250px;
-            border: 1px solid rgba(238, 110, 168, 0.4);
-            background-color: #0d0d0d;
+            border: 1px solid var(--cor-secundaria);
+            background-color: var(--cor-card);
             padding: 15px;
             border-radius: 8px;
-            box-shadow: 2px 2px 5px rgba(238, 110, 168, 0.1);
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -131,6 +163,7 @@
 <body>
 
     <header>
+        <button id="toggle-tema" class="btn-tema">☀️ Modo Claro</button>
         <h1>Curiosidades sobre memes</h1>
         <p>Vou compartilhar algumas curiosidades sobre memes verão 6.7</p>
     </header>
@@ -143,8 +176,8 @@
                 <h2>Meu primeiro post</h2>
                 <p>Por: Cauan</p>
                 <p style="font-weight: normal;">Boas vindas programador! Aqui vou te ensinar algumas curiosidades sobre o mundo dos memes.</p>
-                <button>❤️ <span>6767</span></button>
-                <button>🔥 <span>0</span></button>
+                <button class="btn-interacao">❤️ <span>6767</span></button>
+                <button class="btn-interacao">🔥 <span>0</span></button>
             </div>
         </div>
 
@@ -161,8 +194,8 @@
                     <p class="fonte">Fonte: <a href="https://pt.wikipedia.org/wiki/O_Gene_Ego%C3%ADsta" target="_blank">DAWKINS, Richard. O Gene Egoísta (1976)</a></p>
                 </div>
                 <div class="interacoes">
-                    <button>❤️ <span>4120</span></button>
-                    <button>🔥 <span>32</span></button>
+                    <button class="btn-interacao">❤️ <span>4120</span></button>
+                    <button class="btn-interacao">🔥 <span>32</span></button>
                 </div>
             </div>
 
@@ -176,8 +209,8 @@
                     <p class="fonte">Fonte: <a href="https://mitpress.mit.edu/9780262525435/memes-in-digital-culture/" target="_blank">SHIFMAN, Limor. Memes in Digital Culture (2014)</a></p>
                 </div>
                 <div class="interacoes">
-                    <button>❤️ <span>5890</span></button>
-                    <button>🔥 <span>18</span></button>
+                    <button class="btn-interacao">❤️ <span>5890</span></button>
+                    <button class="btn-interacao">🔥 <span>18</span></button>
                 </div>
             </div>
 
@@ -191,8 +224,8 @@
                     <p class="fonte">Fonte: <a href="https://www.nbcnews.com/" target="_blank">NBC News / Leilão Zora (2021)</a></p>
                 </div>
                 <div class="interacoes">
-                    <button>❤️ <span>7840</span></button>
-                    <button>🔥 <span>94</span></button>
+                    <button class="btn-interacao">❤️ <span>7840</span></button>
+                    <button class="btn-interacao">🔥 <span>94</span></button>
                 </div>
             </div>
 
@@ -206,8 +239,8 @@
                     <p class="fonte">Fonte: <a href="https://www.nytimes.com/2021/04/29/arts/disaster-girl-meme-nft.html" target="_blank">The New York Times (2021)</a></p>
                 </div>
                 <div class="interacoes">
-                    <button>❤️ <span>6120</span></button>
-                    <button>🔥 <span>56</span></button>
+                    <button class="btn-interacao">❤️ <span>6120</span></button>
+                    <button class="btn-interacao">🔥 <span>56</span></button>
                 </div>
             </div>
 
@@ -221,8 +254,8 @@
                     <p class="fonte">Fonte: <a href="https://www.theverge.com/2021/2/18/22287956/nyan-cat-crypto-art-sold-nft" target="_blank">The Verge (2021)</a></p>
                 </div>
                 <div class="interacoes">
-                    <button>❤️ <span>5430</span></button>
-                    <button>🔥 <span>42</span></button>
+                    <button class="btn-interacao">❤️ <span>5430</span></button>
+                    <button class="btn-interacao">🔥 <span>42</span></button>
                 </div>
             </div>
 
@@ -230,11 +263,9 @@
     </main>
 
     <script>
-        // Seleciona todos os botões da página
-        const botoes = document.querySelectorAll("button");
-
-        // Adiciona o contador independente em cada um
-        botoes.forEach(botao => {
+        // Contador de Curtidas
+        const botoesInteracao = document.querySelectorAll(".btn-interacao");
+        botoesInteracao.forEach(botao => {
             botao.addEventListener("click", () => {
                 const span = botao.querySelector("span");
                 if (span) {
@@ -243,6 +274,20 @@
                     span.textContent = total;
                 }
             });
+        });
+
+        // Alternador de Tema (Modo Claro / Escuro)
+        const btnTema = document.getElementById("toggle-tema");
+        const raiz = document.documentElement;
+
+        btnTema.addEventListener("click", () => {
+            raiz.classList.toggle("light-mode");
+            
+            if (raiz.classList.contains("light-mode")) {
+                btnTema.textContent = "🌙 Modo Escuro";
+            } else {
+                btnTema.textContent = "☀️ Modo Claro";
+            }
         });
     </script>
 </body>
